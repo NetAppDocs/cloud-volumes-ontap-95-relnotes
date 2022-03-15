@@ -1,0 +1,120 @@
+---
+sidebar: sidebar
+permalink: reference-limitations-95.html
+keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features, ha limitations, nfsv4, nfsv3, data tiering, disks, aggregates
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations for Cloud Volumes ONTAP 9.5
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+== General limitations
+
+The following limitations apply to Cloud Volumes ONTAP in AWS and in Azure.
+
+=== Maximum concurrent replication operations
+
+The maximum number of concurrent SnapMirror or SnapVault transfers for Cloud Volumes ONTAP is 100 per node, regardless of the instance type or machine type.
+
+=== Software updates must be completed by Cloud Manager
+
+Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+=== Cloud Volumes ONTAP deployment must not be modified from your cloud provider’s console
+
+Changes to a Cloud Volumes ONTAP configuration from your cloud provider's console results in an unsupported configuration. Any changes to the Cloud Volumes ONTAP resources that Cloud Manager creates and manages can impact system stability and Cloud Manager's ability to manage the system.
+
+=== Disks and aggregates must be managed from Cloud Manager
+
+All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
+
+=== SnapManager licensing limitation
+
+SnapManager per-server licenses are supported with Cloud Volumes ONTAP. Per-storage system (SnapManager suite) licenses are not supported.
+
+=== Unsupported ONTAP features
+
+The following features are not supported with Cloud Volumes ONTAP:
+
+* Aggregate-level inline deduplication
+* Aggregate-level background deduplication
+* Disk maintenance center
+* Disk sanitization
+* Fibre Channel (FC)
+* Flash Pools
+* FlexCache
+* Infinite Volumes
+* Interface groups
+* Intranode LIF failover
+* MetroCluster
+* Multi-tenancy (only one data-serving SVM is supported)
+* RAID4, RAID-DP, RAID-TEC (RAID0 is supported)
+* Service Processor
+* SnapLock Compliance and Enterprise modes (only Cloud WORM is supported)
+* SnapMirror Synchronous
+* VLANs
+
+== Known limitations in AWS
+
+The following known limitations affect Cloud Volumes ONTAP in AWS.
+
+=== Flash Cache limitations
+
+C5D and R5D instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Note the following limitations:
+
+* Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements.
++
+You can choose no storage efficiency when creating a volume from Cloud Manager, or you can create a volume and then http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html[disable data compression by using the CLI^].
+
+* Cache rewarming after a reboot is not supported with Cloud Volumes ONTAP.
+
+=== False alarms reported by Amazon CloudWatch
+
+Cloud Volumes ONTAP does not release CPUs when idle, so Amazon CloudWatch can report a high CPU warning for the EC2 instance because it sees 100% usage. You can ignore this alarm. The ONTAP statistics command displays the true usage of the CPUs.
+
+=== Cloud Volumes ONTAP HA pairs do not support immediate storage giveback
+
+After a node reboots, the partner must sync data before it can return the storage. The time that it takes to resync data depends on the amount of data written by clients while the node was down and the data write speed during the time of giveback.
+
+=== Limitations in the AWS C2S environment
+
+See the https://docs.netapp.com/us-en/occm/media/c2s.pdf[Quick Start Guide for the AWS Commercial Cloud Services Environment^].
+
+=== Limitations in AWS GovCloud (US) regions
+
+* Cloud Manager must be deployed in an AWS GovCloud (US) region if you want to launch Cloud Volumes ONTAP instances in any AWS GovCloud (US) region.
+
+* When deployed in an AWS GovCloud (US) region, Cloud Manager cannot discover ONTAP clusters in a NetApp Private Storage for Microsoft Azure configuration or a NetApp Private Storage for SoftLayer configuration.
+
+=== Detaching and reattaching EBS volumes is not supported
+
+Detaching an EBS volume from a Cloud Volumes ONTAP instance and then reattaching it to another Cloud Volumes ONTAP instance is not supported. You should use Cloud Manager to replicate data between instances.
+
+== Known limitations in Microsoft Azure
+
+The following known limitations affect Cloud Volumes ONTAP in Azure.
+
+=== New deployments aren't supported
+
+New deployments of Cloud Volumes ONTAP 9.5 are no longer supported in Azure. You'll need to deploy Cloud Volumes ONTAP 9.7.
+
+=== HA limitations
+
+The following limitations affect Cloud Volumes ONTAP HA pairs in Microsoft Azure:
+
+* Data tiering is not supported.
+* NFSv4 is not supported. NFSv3 is supported.
+* HA pairs are not supported in some regions.
++
+https://cloud.netapp.com/cloud-volumes-global-regions[See the list of supported Azure regions^].
+
+=== Pay-as-you-go not available for CSP partners
+
+If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy Cloud Volumes ONTAP Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy Cloud Volumes ONTAP BYOL.
