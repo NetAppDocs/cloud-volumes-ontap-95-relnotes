@@ -1,7 +1,50 @@
 settings:
-  name: "Product Name"
+  name: Cloud Volumes ONTAP 9.5 release notes
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
-sidebar: 
+sidebar:
+  entries:
+    - title: Back to Cloud Manager documentation
+      url: https://docs.netapp.com/us-en/cloud-manager-family
+    - title: Cloud Volumes ONTAP 9.5 Release Notes
+      url: /index.html
+    - title: What's new
+      url: /reference-new-95.html
+    - title: Supported configurations
+      url: /reference-supported-configs-95.html
+    - title: Storage limits
+      url: /reference-storage-limits-95.html
+    - title: Known issues
+      url: /reference-issues-95.html
+    - title: Known limitations
+      url: /reference-limitations-95.html
+    - title: Legal notices
+      url: /reference-legal-notices.html
+homepage:
+  tiles:
+    - title: Get started
+      links:
+        - title: title
+          url: page.html
+        - title: title
+          url: page.html
+        - title: title
+          url: page.html
+    - title: tile name
+      links:
+        - title: title
+          url: page.html
+        - title: title
+          url: page.html
+        - title: title
+          url: page.html
+    - title: Blogs & community
+      links:
+        - title: NetApp Community
+          url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+        - title: Cloud Central blog
+          url: https://cloud.netapp.com/blog
+        - title: Cloud webinars
+          url: https://cloud.netapp.com/events
