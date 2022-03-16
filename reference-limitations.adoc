@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference-limitations-95.html
+permalink: reference-limitations.html
 keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features, ha limitations, nfsv4, nfsv3, data tiering, disks, aggregates
 summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 ---
 
-= Known limitations for Cloud Volumes ONTAP 9.5
+= Known limitations
 :hardbreaks:
 :nofooter:
 :icons: font

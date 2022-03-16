@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: reference-new-95.html
+permalink: reference-new.html
 keywords: what's new, new, features, release notes, enhancements
 summary: Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 ---
@@ -113,7 +113,7 @@ The system capacity limit for Cloud Volumes ONTAP Premium and BYOL is now 368 TB
 
 For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For example, a single node system in Azure could have 252 TB of disk-based capacity, which would allow up to 116 TB of inactive data in Azure Blob storage.
 
-For information about disk limits, refer to link:reference-storage-limits-95.html[storage limits].
+For information about disk limits, refer to link:reference-storage-limits.html[storage limits].
 
 === Support for M5 and R5 instances in AWS
 
@@ -142,7 +142,7 @@ a|
 
 |===
 
-These instances use a hypervisor that is based on KVM technology. As a result, the instances support a smaller number of data disks than other instance types: up to 24 data disks for single-node systems and 21 data disks for HA pairs. link:reference-storage-limits-95.html[Learn about storage limits].
+These instances use a hypervisor that is based on KVM technology. As a result, the instances support a smaller number of data disks than other instance types: up to 24 data disks for single-node systems and 21 data disks for HA pairs. link:reference-storage-limits.html[Learn about storage limits].
 
 Learn more about https://aws.amazon.com/ec2/instance-types/m5/[M5 instances^] and https://aws.amazon.com/ec2/instance-types/r5/[R5 instances^].
 

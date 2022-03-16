@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference-supported-configs-95.html
+permalink: reference-supported-configs.html
 keywords: ec2, instance, type, vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations
 summary: Cloud Volumes ONTAP is available in several configurations in AWS and Azure.
 ---
 
-= Supported configurations for Cloud Volumes ONTAP 9.5
+= Supported configurations
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -75,9 +75,9 @@ a|
 
 Notes:
 
-. The instance types denoted with a * include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. link:reference-limitations-95.html#flash-cache-limitations[Learn more].
+. The instance types denoted with a * include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. link:reference-limitations.html#flash-cache-limitations[Learn more].
 
-. For some configurations, disk limits prevent you from reaching the 368 TiB capacity limit by using disks alone. In those cases, you can reach the 368 TiB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference-storage-limits-95.html[storage limits].
+. For some configurations, disk limits prevent you from reaching the 368 TiB capacity limit by using disks alone. In those cases, you can reach the 368 TiB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference-storage-limits.html[storage limits].
 
 . If you enable data tiering, a system’s capacity limit stays the same. The capacity limit includes both disks and object storage.
 
