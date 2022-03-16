@@ -36,14 +36,14 @@ settings:
     - name: Cloud Volumes ONTAP
       url: /cloud-volumes-ontap-94-relnotes
       version-number: "9.4"
-    - name: Cloud Volumes ONTAP
+    - name: ONTAP Cloud
       url: /cloud-volumes-ontap-93-relnotes
       version-number: "9.3"
 sidebar:
   entries:
     - title: Back to Cloud Manager documentation
       url: https://docs.netapp.com/us-en/cloud-manager-family
-    - title: Cloud Volumes ONTAP 9.5 Release Notes
+    - title: Release notes home
       url: /index.html
     - title: What's new
       url: /reference-new.html
