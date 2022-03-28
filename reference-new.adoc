@@ -170,7 +170,7 @@ Data-at-rest encryption is still supported using other methods. You can encrypt 
 
 ==== c4.2xlarge is no longer supported
 
-The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using this instance type, you must first https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-modifying-ontap-cloud.html[change to a new instance type] before you upgrade to the 9.5 release.
+The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using this instance type, you must first https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html[change to a new instance type] before you upgrade to the 9.5 release.
 
 == 9.5 RC1 for Azure (4 Dec 2018)
 
