@@ -1,0 +1,220 @@
+---
+sidebar: sidebar
+permalink: reference-new.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
+---
+
+= What's new in Cloud Volumes ONTAP 9.5
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
+
+NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[Cloud Manager Release Notes] for details.
+
+== 9.5 P11 (6 Mar 2020)
+
+The 9.5 P11 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P11[View the list of bugs fixed in the P11 patch^] (NetApp Support Site login required).
+
+== 9.5 P10 (12 Jan 2020)
+
+The 9.5 P10 patch release for Cloud Volumes ONTAP is now available through Cloud Manager. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P10[View the list of bugs fixed in the P10 patch^] (NetApp Support Site login required).
+
+== 9.5 P9 patch (17 Nov 2019)
+
+The 9.5 P9 patch release for Cloud Volumes ONTAP is now available through Cloud Manager. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P9[View the list of bugs fixed in the P9 patch^] (NetApp Support Site login required).
+
+== 9.5 P8 patch (6 Oct 2019)
+
+The 9.5 P8 patch release for Cloud Volumes ONTAP is now available. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P8[View the list of bugs fixed in the P8 patch^] (NetApp Support Site login required).
+
+== 9.5 P6 patch (16 July 2019)
+
+The 9.5 P6 patch release for Cloud Volumes ONTAP is now available. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P6[View the list of bugs fixed in the P6 patch^] (NetApp Support Site login required).
+
+NOTE: Cloud Manager prompts you to upgrade to specific ONTAP patch releases that include important fixes for Cloud Volumes ONTAP. That's why you might notice a gap between patch releases in these release notes. We're listing only those patches that Cloud Manager makes available to you.
+
+== 9.5 P4 patch (16 May 2019)
+
+The 9.5 P4 patch release for Cloud Volumes ONTAP is now available. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P4[View the list of bugs fixed in the P4 patch^] (NetApp Support Site login required).
+
+== Support for the AWS C2S Environment (2 May 2019)
+
+Cloud Volumes ONTAP 9.5 and Cloud Manager 3.6.4 are now available to the U.S. Intelligence Community (IC) through the AWS Commercial Cloud Services (C2S) environment. You can deploy HA pairs and single node systems in C2S.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Get started in the AWS C2S environment^]
+
+== 9.5 P3 patch (25 Apr 2019)
+
+The 9.5 P3 patch release for Cloud Volumes ONTAP is now available. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P3[View the list of bugs fixed in the P3 patch^] (NetApp Support Site login required).
+
+== 9.5 P2 patch (10 Apr 2019)
+
+The 9.5 P2 patch release for Cloud Volumes ONTAP is now available. This patch includes bug fixes, as well as support for Flash Cache with new AWS EC2 instance types. Cloud Manager will prompt you to upgrade your existing systems to this patch release.
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P2[Click here to see the bugs fixed in the P2 patch^] (NetApp Support Site login required).
+
+=== Flash Cache support with new EC2 instance types
+
+The following EC2 instance types are now supported with the Premium and BYOL licenses:
+
+* c5d.4xlarge
+* c5d.9xlarge
+* r5d.2xlarge
+
+These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services.
+
+Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. You can choose no storage efficiency when creating a volume from Cloud Manager, or you can create a volume and then http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html[disable data compression by using the CLI^].
+
+NOTE: Cache rewarming after a reboot is not supported with Cloud Volumes ONTAP.
+
+== HA support in the Azure Central US region (25 Mar 2019)
+
+HA pairs are now supported in the Central US region in Azure.
+
+https://cloud.netapp.com/cloud-volumes-global-regions[See the full list of supported Azure regions^].
+
+== 9.5 P1 patch (18 Mar 2019)
+
+The 9.5 P1 patch release for Cloud Volumes ONTAP is now available for all configurations. Cloud Manager will prompt you to upgrade your existing systems to this patch release.
+
+If you have an existing HA pair in Azure, NetApp will contact you to help you apply the P1 patch release.
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.5P1[Click here to see the bugs fixed in the P1 patch^] (NetApp Support Site login required).
+
+== Cloud Volumes ONTAP HA is now GA in Azure (18 Mar 2019)
+
+With the release of the 9.5 P1 patch, HA pairs in Azure are now Generally Available (GA). A Preview license is no longer required.
+
+The GA release is available in most Azure regions with the exception of the following:
+
+* Central US
+* North Central US
+* US Gov regions
+* West US
+* West Central US
+
+Maintenance in these regions can prevent the creation of Cloud Volumes ONTAP and prevent failover from taking place. We plan to support these regions as soon as the maintenance is completed.
+
+https://cloud.netapp.com/cloud-volumes-global-regions[See a full list of supported Azure regions^].
+
+== 9.5 GA for AWS and Azure (4 Feb 2019)
+
+The General Availability (GA) release of Cloud Volumes ONTAP 9.5 is now available in AWS and in Microsoft Azure (for single node systems only in Azure). The GA release includes stability fixes, new and deprecated features in AWS, and a change to system capacity limits.
+
+=== 368 TB capacity limit for all Premium and BYOL configurations
+
+The system capacity limit for Cloud Volumes ONTAP Premium and BYOL is now 368 TB across all configurations: single node and HA in both AWS and Azure.
+
+For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[tiering inactive data to object storage^]. For example, a single node system in Azure could have 252 TB of disk-based capacity, which would allow up to 116 TB of inactive data in Azure Blob storage.
+
+For information about disk limits, refer to link:reference-storage-limits.html[storage limits].
+
+=== Support for M5 and R5 instances in AWS
+
+Cloud Volumes ONTAP now supports several instance types in the M5 and R5 families:
+
+[cols=4*,options="header"]
+|===
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| m5.xlarge
+a|
+* m5.2xlarge
+* r5.xlarge
+a|
+* m5.4xlarge
+* r5.2xlarge
+a|
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
+* r5.xlarge
+* r5.2xlarge
+
+|===
+
+These instances use a hypervisor that is based on KVM technology. As a result, the instances support a smaller number of data disks than other instance types: up to 24 data disks for single-node systems and 21 data disks for HA pairs. link:reference-storage-limits.html[Learn about storage limits].
+
+Learn more about https://aws.amazon.com/ec2/instance-types/m5/[M5 instances^] and https://aws.amazon.com/ec2/instance-types/r5/[R5 instances^].
+
+=== Support for NetApp Volume Encryption in AWS
+
+https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
+
+At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported. You can find the supported key managers in the http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] under the *Key Managers* solution.
+
+You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption from its user interface and from its APIs.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html[Learn how to set up NetApp Volume Encryption^]
+
+NOTE: NetApp Volume Encryption is a different encryption technology than Cloud Volumes ONTAP encryption, which encrypted data at the aggregate level and is now deprecated. An upgrade between these two encryption technologies is not possible. See <<Deprecated features in AWS>> for more information.
+
+=== Deprecated features in AWS
+
+Two features are no longer supported in the 9.5 release.
+
+==== Cloud Volumes ONTAP aggregate-level encryption now only supports AWS native encryption of disks
+
+Data-at-rest encryption of aggregates using external key managers is no longer supported. If you are currently using this feature and you want to upgrade, you must launch a new 9.5 system and then https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html[replicate data] to that system.
+
+Data-at-rest encryption is still supported using other methods. You can encrypt data by using NetApp Volume Encryption or by using the AWS Key Management Service (KMS). https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-security.html[Learn more about encryption of data at rest^].
+
+==== c4.2xlarge is no longer supported
+
+The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using this instance type, you must first https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html[change to a new instance type] before you upgrade to the 9.5 release.
+
+== 9.5 RC1 for Azure (4 Dec 2018)
+
+Cloud Volumes ONTAP 9.5 RC1 is now available in Microsoft Azure. The 9.5 release will be available in AWS at a later date.
+
+=== Preview of high-availability (HA) pairs in Microsoft Azure
+
+A preview of Cloud Volumes ONTAP HA pairs in Microsoft Azure is now available. An HA pair provides enterprise reliability and continuous operations in case of failures in your cloud environment. Similar to a physical ONTAP cluster, storage in an Azure HA pair is shared between the two nodes.
+
+HA pairs in Azure are available as a preview. You can request a preview license by contacting us at ng-Cloud-Volume-ONTAP-preview@netapp.com.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html[Learn more about HA pairs in Azure^].
+
+=== Improved networking performance in Azure
+
+Cloud Volumes ONTAP systems are now enabled with https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli[Accelerated Networking^] in Azure. Cloud Manager enables Accelerated Networking when you upgrade to 9.5 and when you deploy new 9.5 systems.
+
+=== Support for new Azure regions
+
+You can now deploy Cloud Volumes ONTAP in the France Central region.
+
+//You can now deploy Cloud Volumes ONTAP in the following Azure regions:
+
+//* Australia Central
+//* Australia Central 2
+//* France Central
+//* France South
+
+=== Support for NetApp Volume Encryption in Azure
+
+https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
+
+At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported. You can find the supported key managers in the http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] under the *Key Managers* solution.
+
+You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption at this time.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html[Learn how to set up NetApp Volume Encryption^]
+
+== Upgrade notes
+
+* Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+* You can upgrade to Cloud Volumes ONTAP 9.5 from the 9.4 release.
+
+* The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.
