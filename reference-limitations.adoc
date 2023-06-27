@@ -85,7 +85,7 @@ After a node reboots, the partner must sync data before it can return the storag
 
 === Limitations in the AWS C2S environment
 
-View limitations in the Cloud Manager docs: https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Get started in the AWS C2S environment^]
+View limitations in the Cloud Manager docs: https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Get started in the AWS C2S environment^]
 
 === Limitations in AWS GovCloud (US) regions
 
