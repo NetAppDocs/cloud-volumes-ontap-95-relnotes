@@ -148,7 +148,7 @@ Learn more about https://aws.amazon.com/ec2/instance-types/m5/[M5 instances^] an
 
 === Support for NetApp Volume Encryption in AWS
 
-https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
+https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
 
 At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported. You can find the supported key managers in the http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] under the *Key Managers* solution.
 
@@ -201,7 +201,7 @@ You can now deploy Cloud Volumes ONTAP in the France Central region.
 
 === Support for NetApp Volume Encryption in Azure
 
-https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
+https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
 
 At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported. You can find the supported key managers in the http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] under the *Key Managers* solution.
 
