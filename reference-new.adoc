@@ -77,7 +77,7 @@ NOTE: Cache rewarming after a reboot is not supported with Cloud Volumes ONTAP.
 
 HA pairs are now supported in the Central US region in Azure.
 
-https://cloud.netapp.com/cloud-volumes-global-regions[See the full list of supported Azure regions^].
+https://bluexp.netapp.com/cloud-volumes-global-regions[See the full list of supported Azure regions^].
 
 == 9.5 P1 patch (18 Mar 2019)
 
@@ -101,7 +101,7 @@ The GA release is available in most Azure regions with the exception of the foll
 
 Maintenance in these regions can prevent the creation of Cloud Volumes ONTAP and prevent failover from taking place. We plan to support these regions as soon as the maintenance is completed.
 
-https://cloud.netapp.com/cloud-volumes-global-regions[See a full list of supported Azure regions^].
+https://bluexp.netapp.com/cloud-volumes-global-regions[See a full list of supported Azure regions^].
 
 == 9.5 GA for AWS and Azure (4 Feb 2019)
 
