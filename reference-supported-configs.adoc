@@ -179,4 +179,4 @@ Notes:
 
 . Data tiering is not supported with HA pairs.
 
-. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+. For Azure region support, see https://bluexp.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
